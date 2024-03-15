@@ -275,4 +275,4 @@ tictactoe/media/
 
 .pytest_cache/
 
-static/assets/
+**/static/assets/
