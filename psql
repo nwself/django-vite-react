@@ -1,0 +1,3 @@
+-- Assuming that unix domain socket connection mode is being used because
+-- USER or PASSWORD are blank in Django DATABASES configuration.
+CREATE DATABASE tictactoe WITH ENCODING 'UTF-8';
