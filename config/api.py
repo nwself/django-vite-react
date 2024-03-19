@@ -3,6 +3,6 @@ from ninja import NinjaAPI
 api = NinjaAPI()
 
 
-@api.get("/hello")
+@api.get("/yellow")
 def hello(request):
-    return "Hello world"
+    return "Yellow world"
