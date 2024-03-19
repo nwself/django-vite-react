@@ -2,7 +2,7 @@
 
 ## Frontend development
 
-Open terminal to `tictactoe/frontend` and run `npm run autobuild`
+Open terminal to `tictactoe/frontend`. After running `npm install` you can run `npm run autobuild` to update the built files anytime you change frontend files.
 
 ## Backend development
 
