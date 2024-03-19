@@ -1,8 +1,8 @@
-# Ultimate TicTacToe
+# Ultimate dipole
 
 ## Frontend development
 
-Open terminal to `tictactoe/frontend` and run `npm run autobuild`
+Open terminal to `dipole/frontend` and run `npm run autobuild`
 
 ## Backend development
 

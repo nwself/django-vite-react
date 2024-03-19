@@ -1,4 +1,4 @@
-# Translations for the Ultimate TicTacToe project
+# Translations for the Ultimate dipole project
 # Copyright (C) 2024 Michael Stewart
 # Michael Stewart <admin@hcientist.com>, 2024.
 #

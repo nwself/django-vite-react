@@ -6,8 +6,8 @@ from pathlib import Path
 import environ
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
-# tictactoe/
-APPS_DIR = BASE_DIR / "tictactoe"
+# dipole/
+APPS_DIR = BASE_DIR / "dipole"
 env = environ.Env()
 
 READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=True)
@@ -49,7 +49,7 @@ LOCALE_PATHS = [str(BASE_DIR / "locale")]
 DATABASES = {
     "default": env.db(
         "DATABASE_URL",
-        default="postgres:///tictactoe",
+        default="postgres:///dipole",
     ),
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
@@ -86,7 +86,7 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    "tictactoe.users",
+    "dipole.users",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -95,7 +95,7 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 # MIGRATIONS
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#migration-modules
-MIGRATION_MODULES = {"sites": "tictactoe.contrib.sites.migrations"}
+MIGRATION_MODULES = {"sites": "dipole.contrib.sites.migrations"}
 
 # AUTHENTICATION
 # ------------------------------------------------------------------------------
@@ -193,7 +193,7 @@ TEMPLATES = [
                 "django.template.context_processors.static",
                 "django.template.context_processors.tz",
                 "django.contrib.messages.context_processors.messages",
-                "tictactoe.users.context_processors.allauth_settings",
+                "dipole.users.context_processors.allauth_settings",
             ],
         },
     },
@@ -276,13 +276,13 @@ ACCOUNT_EMAIL_REQUIRED = True
 # https://docs.allauth.org/en/latest/account/configuration.html
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 # https://docs.allauth.org/en/latest/account/configuration.html
-ACCOUNT_ADAPTER = "tictactoe.users.adapters.AccountAdapter"
+ACCOUNT_ADAPTER = "dipole.users.adapters.AccountAdapter"
 # https://docs.allauth.org/en/latest/account/forms.html
-ACCOUNT_FORMS = {"signup": "tictactoe.users.forms.UserSignupForm"}
+ACCOUNT_FORMS = {"signup": "dipole.users.forms.UserSignupForm"}
 # https://docs.allauth.org/en/latest/socialaccount/configuration.html
-SOCIALACCOUNT_ADAPTER = "tictactoe.users.adapters.SocialAccountAdapter"
+SOCIALACCOUNT_ADAPTER = "dipole.users.adapters.SocialAccountAdapter"
 # https://docs.allauth.org/en/latest/socialaccount/configuration.html
-SOCIALACCOUNT_FORMS = {"signup": "tictactoe.users.forms.UserSocialSignupForm"}
+SOCIALACCOUNT_FORMS = {"signup": "dipole.users.forms.UserSocialSignupForm"}
 
 
 # Your stuff...
