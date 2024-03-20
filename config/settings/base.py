@@ -290,15 +290,17 @@ ACCOUNT_EMAIL_SUBJECT_PREFIX = "[Digital Dipole]"
 # ------------------------------------------------------------------------------
 
 # Noodling 
-# from https://docs.allauth.org/en/latest/installation/quickstart.html#:~:text=%23%20Provider%20specific%20settings,%7D%0A%20%20%20%20%7D%0A%7D
-SOCIALACCOUNT_PROVIDERS = {
-    'google': {
-        'SCOPE': [
-            'email',
-        ],
-        'AUTH_PARAMS': {
-            'access_type': 'online',
-        },
-        'OAUTH_PKCE_ENABLED': True,
-    }
-}
+
+# Figure out google auth later
+# https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid
+# SOCIALACCOUNT_PROVIDERS = {
+#     'google': {
+#         'SCOPE': [
+#             'email',
+#         ],
+#         'AUTH_PARAMS': {
+#             'access_type': 'online',
+#         },
+#         'OAUTH_PKCE_ENABLED': True,
+#     }
+# }
