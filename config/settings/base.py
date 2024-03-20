@@ -270,7 +270,7 @@ LOGGING = {
 # ------------------------------------------------------------------------------
 ACCOUNT_ALLOW_REGISTRATION = env.bool("DJANGO_ACCOUNT_ALLOW_REGISTRATION", True)
 # https://docs.allauth.org/en/latest/account/configuration.html
-ACCOUNT_AUTHENTICATION_METHOD = "username"
+ACCOUNT_AUTHENTICATION_METHOD = "username_email"                    # por que no los dos?
 # https://docs.allauth.org/en/latest/account/configuration.html
 ACCOUNT_EMAIL_REQUIRED = True
 # https://docs.allauth.org/en/latest/account/configuration.html
@@ -283,7 +283,22 @@ ACCOUNT_FORMS = {"signup": "dipole.users.forms.UserSignupForm"}
 SOCIALACCOUNT_ADAPTER = "dipole.users.adapters.SocialAccountAdapter"
 # https://docs.allauth.org/en/latest/socialaccount/configuration.html
 SOCIALACCOUNT_FORMS = {"signup": "dipole.users.forms.UserSocialSignupForm"}
+ACCOUNT_EMAIL_SUBJECT_PREFIX = "[Digital Dipole]"
 
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+
+# Noodling 
+# from https://docs.allauth.org/en/latest/installation/quickstart.html#:~:text=%23%20Provider%20specific%20settings,%7D%0A%20%20%20%20%7D%0A%7D
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        },
+        'OAUTH_PKCE_ENABLED': True,
+    }
+}

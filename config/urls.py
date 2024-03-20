@@ -24,6 +24,7 @@ urlpatterns = [
     # User management
     path("users/", include("dipole.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
+    # path("accounts/", include("django.contrib.auth.urls")),
     # Your stuff: custom urls includes go here
     path("api/", api.urls),
     # ...
